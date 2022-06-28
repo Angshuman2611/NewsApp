@@ -13,10 +13,15 @@ class NewsCell: UITableViewCell {
     @IBOutlet weak var newsAuthor: UILabel!
     @IBOutlet weak var newsDescription: UILabel!
     
+    var articlesData: Article?{
+        didSet {
+            setup()
+        }
+    }
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        
+        selectionStyle = .none
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -24,4 +29,10 @@ class NewsCell: UITableViewCell {
 
     }
 
+    private func setup() {
+        newsTitle.text = articlesData?.title
+        newsAuthor.text = articlesData?.author
+        newsDescription.text = articlesData?.articleDescription
+        newsImage.load(url: URL(string: (articlesData?.urlToImage)!)!, placeHolder: "placeHolderImg")
+    }
 }

@@ -24,6 +24,8 @@
 		8FAA45E3286B362D003FAA00 /* Bindable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FAA45E2286B362D003FAA00 /* Bindable.swift */; };
 		8FAA45E5286B38CB003FAA00 /* NewsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FAA45E4286B38CB003FAA00 /* NewsCell.swift */; };
 		8FAA45E7286B3F7A003FAA00 /* URLExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FAA45E6286B3F7A003FAA00 /* URLExtension.swift */; };
+		8FAA45EA286B52DA003FAA00 /* WebViewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FAA45E9286B52DA003FAA00 /* WebViewVC.swift */; };
+		8FAA45EC286B52FA003FAA00 /* WebViewScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8FAA45EB286B52FA003FAA00 /* WebViewScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +46,8 @@
 		8FAA45E2286B362D003FAA00 /* Bindable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bindable.swift; sourceTree = "<group>"; };
 		8FAA45E4286B38CB003FAA00 /* NewsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsCell.swift; sourceTree = "<group>"; };
 		8FAA45E6286B3F7A003FAA00 /* URLExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLExtension.swift; sourceTree = "<group>"; };
+		8FAA45E9286B52DA003FAA00 /* WebViewVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewVC.swift; sourceTree = "<group>"; };
+		8FAA45EB286B52FA003FAA00 /* WebViewScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = WebViewScreen.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +107,7 @@
 		8FAA45C6286B28D0003FAA00 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				8FAA45E8286B528F003FAA00 /* WebViewScreen */,
 				8FAA45CC286B290C003FAA00 /* HomeScreen */,
 			);
 			path = View;
@@ -160,6 +165,15 @@
 				8FAA45E4286B38CB003FAA00 /* NewsCell.swift */,
 			);
 			path = HomeScreen;
+			sourceTree = "<group>";
+		};
+		8FAA45E8286B528F003FAA00 /* WebViewScreen */ = {
+			isa = PBXGroup;
+			children = (
+				8FAA45E9286B52DA003FAA00 /* WebViewVC.swift */,
+				8FAA45EB286B52FA003FAA00 /* WebViewScreen.storyboard */,
+			);
+			path = WebViewScreen;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -228,6 +242,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8FAA45EC286B52FA003FAA00 /* WebViewScreen.storyboard in Resources */,
 				8FAA45BE286B28C2003FAA00 /* LaunchScreen.storyboard in Resources */,
 				8FAA45BB286B28C2003FAA00 /* Assets.xcassets in Resources */,
 				8FAA45B9286B28C0003FAA00 /* Main.storyboard in Resources */,
@@ -252,6 +267,7 @@
 				8FAA45D8286B298B003FAA00 /* APIURLConstants.swift in Sources */,
 				8FAA45D6286B298B003FAA00 /* Constants.swift in Sources */,
 				8FAA45DA286B29A0003FAA00 /* AlamoWebServices.swift in Sources */,
+				8FAA45EA286B52DA003FAA00 /* WebViewVC.swift in Sources */,
 				8FAA45E5286B38CB003FAA00 /* NewsCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -9,6 +9,8 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    private var pullControl = UIRefreshControl()
+    
     let viewModel = HomeViewModel()
     var article: [Article]?
 
@@ -35,8 +37,16 @@ class ViewController: UIViewController {
     }
 
     private func setup() {
+        
+        pullControl.addTarget(self, action: #selector(refreshListData(_:)), for: .valueChanged)
+        mTableView.refreshControl = pullControl
         mTableView.delegate = self
         mTableView.dataSource = self
+    }
+    
+    @objc private func refreshListData(_ sender: Any) {
+        viewModel.fetchNews()
+        self.pullControl.endRefreshing()
     }
 }
 
@@ -52,12 +62,15 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "NewsCell", for: indexPath) as! NewsCell
-        cell.newsTitle.text = article?[indexPath.row].title
-        cell.newsAuthor.text = article?[indexPath.row].author
-        cell.newsDescription.text = article?[indexPath.row].articleDescription
-        cell.newsImage.load(url: article?[indexPath.row].urlToImage ?? "placeHoldeImg")
+        cell.articlesData = article?[indexPath.row]
         return cell
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let storyBoard = UIStoryboard(name: "WebViewScreen", bundle: nil)
+        let vc = storyBoard.instantiateViewController(withIdentifier: "WebViewVC") as! WebViewVC
+        vc.webURL = article?[indexPath.row].url
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
 }
 
