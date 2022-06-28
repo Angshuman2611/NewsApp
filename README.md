@@ -1,6 +1,6 @@
 # NewsApp
 
-<a href="url"><img src="https://user-images.githubusercontent.com/100036367/176227226-a7c2a352-e4b5-4fdd-bc55-95be00d84e0f.png" align="left" height="48" width="48" ></a>
+<a href="url"><img src="https://user-images.githubusercontent.com/100036367/176227226-a7c2a352-e4b5-4fdd-bc55-95be00d84e0f.png" align="left" height="1280" width="720" ></a>
 
 
 ![Simulator Screen Shot - iPhone 12 - 2022-06-28 at 21 32 42](https://user-images.githubusercontent.com/100036367/176227226-a7c2a352-e4b5-4fdd-bc55-95be00d84e0f.png)
