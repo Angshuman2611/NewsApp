@@ -19,6 +19,11 @@
 		8FAA45D7286B298B003FAA00 /* StringConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FAA45D4286B298B003FAA00 /* StringConstants.swift */; };
 		8FAA45D8286B298B003FAA00 /* APIURLConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FAA45D5286B298B003FAA00 /* APIURLConstants.swift */; };
 		8FAA45DA286B29A0003FAA00 /* AlamoWebServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FAA45D9286B29A0003FAA00 /* AlamoWebServices.swift */; };
+		8FAA45DF286B33AC003FAA00 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FAA45DE286B33AC003FAA00 /* HomeViewModel.swift */; };
+		8FAA45E1286B3403003FAA00 /* NewsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FAA45E0286B3403003FAA00 /* NewsModel.swift */; };
+		8FAA45E3286B362D003FAA00 /* Bindable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FAA45E2286B362D003FAA00 /* Bindable.swift */; };
+		8FAA45E5286B38CB003FAA00 /* NewsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FAA45E4286B38CB003FAA00 /* NewsCell.swift */; };
+		8FAA45E7286B3F7A003FAA00 /* URLExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FAA45E6286B3F7A003FAA00 /* URLExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +39,11 @@
 		8FAA45D4286B298B003FAA00 /* StringConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringConstants.swift; sourceTree = "<group>"; };
 		8FAA45D5286B298B003FAA00 /* APIURLConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIURLConstants.swift; sourceTree = "<group>"; };
 		8FAA45D9286B29A0003FAA00 /* AlamoWebServices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlamoWebServices.swift; sourceTree = "<group>"; };
+		8FAA45DE286B33AC003FAA00 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		8FAA45E0286B3403003FAA00 /* NewsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsModel.swift; sourceTree = "<group>"; };
+		8FAA45E2286B362D003FAA00 /* Bindable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bindable.swift; sourceTree = "<group>"; };
+		8FAA45E4286B38CB003FAA00 /* NewsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsCell.swift; sourceTree = "<group>"; };
+		8FAA45E6286B3F7A003FAA00 /* URLExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +95,7 @@
 		8FAA45C5286B28C9003FAA00 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				8FAA45DE286B33AC003FAA00 /* HomeViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -100,6 +111,7 @@
 		8FAA45C7286B28D6003FAA00 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				8FAA45E0286B3403003FAA00 /* NewsModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -124,6 +136,8 @@
 		8FAA45CA286B28EF003FAA00 /* Utility */ = {
 			isa = PBXGroup;
 			children = (
+				8FAA45E2286B362D003FAA00 /* Bindable.swift */,
+				8FAA45E6286B3F7A003FAA00 /* URLExtension.swift */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -143,6 +157,7 @@
 			children = (
 				8FAA45B5286B28C0003FAA00 /* ViewController.swift */,
 				8FAA45B7286B28C0003FAA00 /* Main.storyboard */,
+				8FAA45E4286B38CB003FAA00 /* NewsCell.swift */,
 			);
 			path = HomeScreen;
 			sourceTree = "<group>";
@@ -226,13 +241,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8FAA45E3286B362D003FAA00 /* Bindable.swift in Sources */,
 				8FAA45B6286B28C0003FAA00 /* ViewController.swift in Sources */,
 				8FAA45B2286B28C0003FAA00 /* AppDelegate.swift in Sources */,
 				8FAA45B4286B28C0003FAA00 /* SceneDelegate.swift in Sources */,
+				8FAA45E1286B3403003FAA00 /* NewsModel.swift in Sources */,
+				8FAA45E7286B3F7A003FAA00 /* URLExtension.swift in Sources */,
+				8FAA45DF286B33AC003FAA00 /* HomeViewModel.swift in Sources */,
 				8FAA45D7286B298B003FAA00 /* StringConstants.swift in Sources */,
 				8FAA45D8286B298B003FAA00 /* APIURLConstants.swift in Sources */,
 				8FAA45D6286B298B003FAA00 /* Constants.swift in Sources */,
 				8FAA45DA286B29A0003FAA00 /* AlamoWebServices.swift in Sources */,
+				8FAA45E5286B38CB003FAA00 /* NewsCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

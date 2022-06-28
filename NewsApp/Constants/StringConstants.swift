@@ -9,7 +9,7 @@ import Foundation
 
 extension Constants{
     struct Strings{
-        enum GithubFeeb: String{
+        enum NewsFeed: String{
             case title = "News App"
         }
     }
