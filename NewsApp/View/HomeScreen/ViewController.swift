@@ -14,18 +14,20 @@ class ViewController: UIViewController {
     let viewModel = HomeViewModel()
     var article: [Article]?
 
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     @IBOutlet weak var mTableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         title = Constants.Strings.NewsFeed.title.rawValue
-        viewModel.fetchNews()
+        activityIndicator.startAnimating()
         setup()
         addListener()
     }
     
     func addListener() {
         viewModel.newsData.bind { result in
+            self.activityIndicator.stopAnimating()
             if (result?.count != 0) {
                 guard let result = result else {
                     return
@@ -37,7 +39,7 @@ class ViewController: UIViewController {
     }
 
     private func setup() {
-        
+        viewModel.fetchNews()
         pullControl.addTarget(self, action: #selector(refreshListData(_:)), for: .valueChanged)
         mTableView.refreshControl = pullControl
         mTableView.delegate = self
