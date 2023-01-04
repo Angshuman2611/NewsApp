@@ -23,4 +23,18 @@ class Pick1 {
     init(value: Int) {
         self.value = value
     }
+    
+    // modify v3 by BR1
+    
+    func addFirst() {
+        
+    }
+    
+    func addLast() {
+        
+    }
+    
+    func deleteElement() {
+        
+    }
 }
