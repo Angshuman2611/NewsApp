@@ -13,8 +13,14 @@ class Pick1 {
     var value: Int
     var next: Pick1?
     
-    init(value: Int, next: Pick1? = nil) {
+    init(value: Int, next: Pick1) {
         self.value = value
         self.next = next
+    }
+    
+    // modify v2 by BR1
+    
+    init(value: Int) {
+        self.value = value
     }
 }
